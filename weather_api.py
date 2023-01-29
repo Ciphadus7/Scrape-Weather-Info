@@ -11,7 +11,7 @@ def get_weather_single(city_name, API_KEY=''):
     with open('dataSingle.txt', 'w') as file:
         file.write("City - Temperature - Condition\n")
         file.write(f"{city} - {temperature} - {condition}")
-        print('Text file has been created.(dataSingle.txt')
+        print('Text file has been created.(dataSingle.txt)')
         file.close()
 
 
@@ -24,7 +24,8 @@ def get_weather(city_name, API_KEY=''):
     with open('data.txt', 'a') as file:
         for dicty in content['list']:
             file.write(f"{city_name} {dicty['dt_txt']}, {dicty['main']['temp']}, {dicty['weather'][0]['description']}\n")
-            print('Text file has been appended.(data.txt)')
+
+    print('Text file has been appended.(data.txt)')
 
 
 
